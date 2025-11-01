@@ -1,10 +1,33 @@
 .UserSettings_container {
     flex: 1;
     padding-top: 30px;
+    overflow: hidden;
 }
 
-.userSettings_body {
-    padding: 20px;
+.userSettings_body_header {
+    background-color: var(--color);
+    margin-bottom: 20px;
+    padding-inline: 24px;
+}
+
+.userSettings_body_header_content {
+    display: flex;
+    flex-direction: row;
+    padding-block: 10px;
+    gap: 20px;
+    list-style: none;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--main-color) #e6e6e6;
+}
+
+.userSettings_body_header_content li {
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.userSettings_body_container {
+    padding-inline: 20px;
 }
 
 /* --------------- lable ------------------------- */
@@ -73,20 +96,35 @@
 }
 
 @media (max-width: 768px) {
+    .userSettings_body_header_content {
+        justify-content: space-between;
+    }
+
     .change_banner_btn {
         width: 40px;
     }
+
     .change_banner_btn .change_banner_content span {
         display: none;
     }
+
     .profile_camera_btn .profile_camera_icon {
         width: 30px;
         height: 30px;
         bottom: 15px;
         left: 10px;
     }
+
     .profile_camera_btn .profile_camera_icon svg {
         width: 18px;
         height: 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .userSettings_body_header_content {
+        max-width: 340px;
+        margin: auto;
+        justify-content: space-between;
     }
 }
