@@ -2,3 +2,91 @@
     flex: 1;
     padding-top: 30px;
 }
+
+.userSettings_body {
+    padding: 20px;
+}
+
+/* --------------- lable ------------------------- */
+/* --------------- lable ------------------------- */
+.change_banner_btn {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--color);
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    transition: all ease-in-out .3s;
+    overflow: hidden;
+}
+
+.change_banner_btn .change_banner_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    height: 40px;
+}
+
+.change_banner_btn .change_banner_content .change_banner_icon {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.change_banner_btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.profile_camera_btn .profile_camera_icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    left: 0px;
+    cursor: pointer;
+}
+
+.profile_camera_btn .profile_camera_icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.profile_camera_btn input,
+.change_banner_btn input {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .change_banner_btn {
+        width: 40px;
+    }
+    .change_banner_btn .change_banner_content span {
+        display: none;
+    }
+    .profile_camera_btn .profile_camera_icon {
+        width: 30px;
+        height: 30px;
+        bottom: 15px;
+        left: 10px;
+    }
+    .profile_camera_btn .profile_camera_icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}

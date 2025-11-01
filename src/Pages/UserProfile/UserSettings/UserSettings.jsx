@@ -1,9 +1,77 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./userSettingsStyle.css"
 import { contextData } from '../../../Context/Context';
 
 export default function UserSettings() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);
+    const [profileImage, setProfileImage] = useState(null);
+    const [coverImage, setCoverImage] = useState(null);
+
+    const convertToWebP = async (file, quality = 0.9) => {
+        const imageBitmap = await createImageBitmap(file);
+        const canvas = document.createElement("canvas");
+        canvas.width = imageBitmap.width;
+        canvas.height = imageBitmap.height;
+
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(imageBitmap, 0, 0);
+
+        const blob = await new Promise((resolve) =>
+            canvas.toBlob(resolve, "image/webp", quality)
+        );
+
+        const webpFile = new File(
+            [blob],
+            file.name.replace(/\.[^/.]+$/, "") + ".webp",
+            { type: "image/webp" }
+        );
+
+        return webpFile;
+    };
+
+    const sendImage = async (name, file, endPoint) => {
+        const formData = new FormData();
+        formData.append(name, file);
+
+        const response = await fetch(endPoint, {
+            method: "POST",
+            headers: { Authorization: `Bearer ${token}` },
+            body: formData,
+        });
+
+        const data = await response.json();
+        if (response.ok && data?.success) {
+            return data?.data?.image;
+        } else {
+            throw new Error(data?.message || "فشل رفع الصورة");
+        }
+    };
+
+    const [imageLoading, setImageLoading] = useState(false);
+    const handleImageUpload = async (event, name, endPoint) => {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        setImageLoading(true);
+        try {
+            const webpFile = await convertToWebP(file);
+            const imageUrl = await sendImage(name, webpFile, endPoint);
+            if (name === "profile_image") setProfileImage(URL.createObjectURL(webpFile));
+            else if (name === "cover_image") setCoverImage(URL.createObjectURL(webpFile));
+        } catch (error) {
+            console.error("Error:", error);
+        } finally {
+            setImageLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        if (userData?.data?.profile_image) {
+            setProfileImage(`${userData.data.profile_image}?t=${Date.now()}`);
+            setCoverImage(`${userData?.data?.cover_image}?t=${Date.now()}`);
+        }
+    }, [userData]);
+
     useEffect(() => {
         if (userID && token) {
             fetchUserData();
@@ -28,8 +96,8 @@ export default function UserSettings() {
                                     <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
                                 </svg>
                             }
+
                             <label className="change_banner_btn">
-                                <img src='/Icons/Camera.svg' alt='Camera' className="camera_icon" />
                                 <input
                                     type="file"
                                     accept="image/*"
@@ -42,7 +110,12 @@ export default function UserSettings() {
                                     }
                                     disabled={imageLoading}
                                 />
-                                <span> تغيير البانر</span>
+                                <div className="change_banner_content">
+                                    <div className="change_banner_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width={23} height={23} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-camera-icon lucide-camera"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" /><circle cx={12} cy={13} r={3} /></svg>
+                                    </div>
+                                    <span> تغيير البانر</span>
+                                </div>
                             </label>
                         </div>
 
@@ -56,6 +129,24 @@ export default function UserSettings() {
                                     </svg>
                                 }
                             </div>
+                            <label className="profile_camera_btn">
+                                <div className="profile_camera_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width={23} height={23} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-camera-icon lucide-camera"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z" /><circle cx={12} cy={13} r={3} /></svg>
+                                </div>
+
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onChange={(e) =>
+                                        handleImageUpload(
+                                            e,
+                                            "profile_image",
+                                            "https://api.mashy.sand.alrmoz.com/api/profile-image"
+                                        )
+                                    }
+                                    disabled={imageLoading}
+                                />
+                            </label>
                         </div>
                     </div>
 
