@@ -14,7 +14,7 @@
     overflow: hidden;
 }
 
-.loading_data .loading_image .skeleton_image{
+.loading_data .loading_image .skeleton_image {
     border-radius: 12px;
     position: relative;
 }
@@ -49,6 +49,7 @@
     margin: auto;
     margin-top: 40px;
 }
+
 .showAnyUserData .showAnyUserData_container,
 .showAnyUserData .loading_data {
     max-width: 1190px;
@@ -78,6 +79,7 @@
 .showAnyUserData .user_data .user_images .cover_user_image img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
     position: absolute;
     inset: 0;
 }
@@ -117,6 +119,8 @@
 }
 
 .showAnyUserData .user_data .user_images .profile_user_image .user_img_container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -135,7 +139,7 @@
 
 /* ====== Responsive ====== */
 
-@media (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .bottom_section_categoryData {
         padding: 20px 20px 100px;
     }
@@ -144,11 +148,53 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
+
+    .showAnyUserData .user_data .user_images .cover_user_image {
+        min-height: 170px;
+        max-height: 180px;
+    }
+
+    .showAnyUserData .user_data .user_images .profile_user_image {
+        width: 100px;
+        height: 30px;
+    }
+
+    .status_dot {
+        width: 15px;
+        height: 15px;
+        left: -5px;
+    }
+
+    .showAnyUserData .user_data .user_images .profile_user_image .user_img_container {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 @media (max-width: 768px) {
     .categories_items {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
+    }
+
+    .showAnyUserData .user_data .user_images .cover_user_image {
+        min-height: 140px;
+        max-height: 150px;
+    }
+
+    .showAnyUserData .user_data .user_images .profile_user_image {
+        width: 90px;
+        height: 30px;
+    }
+
+    .status_dot {
+        width: 15px;
+        height: 15px;
+        left: -5px;
+    }
+
+    .showAnyUserData .user_data .user_images .profile_user_image .user_img_container {
+        width: 90px;
+        height: 90px;
     }
 }
