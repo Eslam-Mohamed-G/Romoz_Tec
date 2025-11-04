@@ -24,8 +24,25 @@ export default function StoreContextProvider({ children }) {
             console.log(err.message);
         }
     };
+
+    // handle favorite toggle
+    const [favorites, setFavorites] = useState({});
+    const fetchUserFavorites = async () => {
+        try {
+            const res = await fetch("/api/favorites", {
+                method: "GET",
+                headers: { Authorization: `Bearer ${token}` },
+            });
+
+            const data = await res.json();
+            setFavorites(data?.data || {});
+        } catch (err) {
+            console.error(err);
+            // setError("حدث خطأ أثناء تحميل المفضلة.");
+        }
+    };
     return (
-        <contextData.Provider value={{ userID, token, fetchUserData, userData }}>
+        <contextData.Provider value={{ userID, token, fetchUserData, userData, fetchUserFavorites, favorites }}>
             {children}
         </contextData.Provider>
     )
