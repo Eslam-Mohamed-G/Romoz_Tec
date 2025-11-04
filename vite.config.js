@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://api.mashy.sand.alrmoz.com', // الرابط الأساسي للباك
+        target: 'https://api.maaashi.com', // الرابط الأساسي للباك
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api') // يحتفظ بالـ /api في الطلب
       }

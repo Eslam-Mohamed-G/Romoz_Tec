@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./registerStyle.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
@@ -13,12 +13,7 @@ export default function Register() {
   const [errorMessage, setErrorMessage] = useState("");
   const [showModdel, setShowModdel] = useState(false);
 
-  const navigate = useNavigate();
-  const closeModel = () => {
-    setShowModdel(false);
-    navigate("/settingsUser");
-  };
-  const [setCookie] = useCookies(["token"]);
+  const [cookies, setCookie] = useCookies(["token"]);
 
   // Yup for validation
   const validationSchema = Yup.object({
@@ -96,6 +91,20 @@ export default function Register() {
       }
     },
   });
+
+  const navigate = useNavigate();
+  
+  const closeModel = () => {
+    setShowModdel(false);
+    navigate("/userProfile/userSettings");
+  };
+
+  useEffect(() => {
+    if (showModdel) {
+      const timer = setTimeout(() => navigate("/userProfile/userSettings"), 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [showModdel]);
 
   return (
     <div className="register-container">
