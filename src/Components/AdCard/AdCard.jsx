@@ -49,7 +49,7 @@ export default function AdCard({ category, adID, img, title, sellerName, userID,
     return (
         <div className="ad_card" onClick={() => navigate(`/${category}/${adID}`)}>
             <div className="card_image">
-                <img src={`https://api.mashy.sand.alrmoz.com/storage/${img}`} alt={title} />
+                <img src={`https://api.maaashi.com/storage/${img}`} alt={title} />
             </div>
 
             <div className="card_user" onClick={(e) => { e.stopPropagation(); navigate(`/user/${sellerName}/${userID}`) }}>
