@@ -38,7 +38,6 @@ export default function StoreContextProvider({ children }) {
             setFavorites(data?.data || {});
         } catch (err) {
             console.error(err);
-            // setError("حدث خطأ أثناء تحميل المفضلة.");
         }
     };
     return (

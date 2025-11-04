@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import "./accountUserStyle.css"
 import { contextData } from '../../../Context/Context';
+import { useCookies } from 'react-cookie';
 
 export default function AccountUser() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);
