@@ -13,6 +13,7 @@ import axios from "axios";
 import { useCookies } from "react-cookie";
 import LoginRequiredCard from '../../Components/AdvertisementsComponents/LoginRequiredCard/LoginRequiredCard';
 import { Link, useNavigate } from 'react-router-dom';
+import { ToastWarning } from '../../Components/Navbar/Navbar';
 
 export default function Advertisements() {
     // Step management: 1=category, 2=details, 3=review
