@@ -103,6 +103,7 @@ export default function ShowAnyUser() {
                                 title={cat?.ad?.information?.title}
                                 sellerName={cat?.ad?.seller?.name}
                                 userID={cat?.ad?.user?.id_user}
+                                showUserImg={false}
                                 userImg={cat?.ad?.user?.profile_image}
                                 area={cat?.ad?.user?.area}
                                 created_at={cat?.ad?.created_at}

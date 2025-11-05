@@ -77,7 +77,7 @@
 
 
 /* ===== Cards ===== */
-.categories_items {
+.accountUser_Advertisements {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -88,7 +88,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .categories_items {
+    .accountUser_Advertisements {
         grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
@@ -105,7 +105,7 @@
 }
 
 @media (max-width: 768px) {
-    .categories_items {
+    .accountUser_Advertisements {
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }

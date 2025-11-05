@@ -51,7 +51,7 @@ export default function AccountUser() {
                     </div>
                 </div>
 
-                <div className="car-card-grid">
+                <div className="accountUser_Advertisements">
                     {userAdvertisements.length > 0 ? (
                         userAdvertisements.map((ad) => (
                             <AdCard
@@ -62,6 +62,7 @@ export default function AccountUser() {
                                 title={ad?.information?.title}
                                 sellerName={ad?.seller?.name}
                                 userID={ad?.user?.id_user}
+                                showUserImg={false}
                                 userImg={ad?.user?.profile_image}
                                 area={ad?.user?.area}
                                 created_at={ad?.created_at}

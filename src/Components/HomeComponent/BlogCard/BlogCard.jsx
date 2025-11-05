@@ -60,6 +60,7 @@ export default function BlogCard() {
                   title={ad?.ad?.information?.title}
                   sellerName={ad?.ad?.seller?.name}
                   userID={ad?.ad?.user?.id_user}
+                  showUserImg={true}
                   userImg={ad?.ad?.user?.profile_image}
                   area={ad?.ad?.user?.area}
                   created_at={ad?.ad?.created_at}
