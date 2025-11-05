@@ -5,7 +5,7 @@ import AdCard from '../../../Components/AdCard/AdCard';
 
 export default function AccountUser() {
     const { userID, token, fetchUserData, userData, fetchUserAds, userAdvertisements, adsIsLoading } = useContext(contextData);
-    console.log(userAdvertisements);
+    // console.log(userAdvertisements);
     useEffect(() => {
         if (userID && token) {
             fetchUserData();
