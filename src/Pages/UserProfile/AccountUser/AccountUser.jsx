@@ -1,13 +1,15 @@
 import React, { useContext, useEffect } from 'react';
 import "./accountUserStyle.css"
 import { contextData } from '../../../Context/Context';
-import { useCookies } from 'react-cookie';
+import AdCard from '../../../Components/AdCard/AdCard';
 
 export default function AccountUser() {
-    const { userID, token, fetchUserData, userData } = useContext(contextData);
+    const { userID, token, fetchUserData, userData, fetchUserAds, userAdvertisements, adsIsLoading } = useContext(contextData);
+    console.log(userAdvertisements);
     useEffect(() => {
         if (userID && token) {
             fetchUserData();
+            fetchUserAds();
         }
     }, [userID, token]);
     return (
@@ -47,6 +49,28 @@ export default function AccountUser() {
                     <div className="user_info">
                         <h3 className="user_name">{userData?.name?.split(" ").slice(0, 2).join(" ")}</h3>
                     </div>
+                </div>
+
+                <div className="car-card-grid">
+                    {userAdvertisements.length > 0 ? (
+                        userAdvertisements.map((ad) => (
+                            <AdCard
+                                key={`${ad?.category}_${ad?.id_ads}`}
+                                category={ad?.category}
+                                adID={ad?.id_ads}
+                                img={ad?.images[0]}
+                                title={ad?.information?.title}
+                                sellerName={ad?.seller?.name}
+                                userID={ad?.user?.id_user}
+                                userImg={ad?.user?.profile_image}
+                                area={ad?.user?.area}
+                                created_at={ad?.created_at}
+                                price={ad?.information?.price}
+                            />
+                        ))
+                    ) : (
+                        <p className="no-ads">لا توجد إعلانات حالياً</p>
+                    )}
                 </div>
             </div>
         </section>

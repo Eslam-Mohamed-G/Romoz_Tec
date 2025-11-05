@@ -25,6 +25,33 @@ export default function StoreContextProvider({ children }) {
         }
     };
 
+    // fetch user Advertisements 
+    const [userAdvertisements, setUserAdvertisements] = useState([]);
+    const [adsIsLoading, setadsIsLoading] = useState(false);
+    const fetchUserAds = async () => {
+        try {
+            setadsIsLoading(true);
+
+            const response = await fetch(
+                "https://api.maaashi.com/api/profile/ealans",
+                {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Authorization: `Bearer ${token}`,
+                    },
+                }
+            );
+
+            const dataAds = await response.json();
+            setUserAdvertisements(dataAds.data?.data || []);
+        } catch {
+            setError("فشل الاتصال بالسيرفر.");
+        } finally {
+            setadsIsLoading(false);
+        }
+    };
+
     // handle favorite toggle
     const [favorites, setFavorites] = useState({});
     const fetchUserFavorites = async () => {
@@ -41,7 +68,7 @@ export default function StoreContextProvider({ children }) {
         }
     };
     return (
-        <contextData.Provider value={{ userID, token, fetchUserData, userData, fetchUserFavorites, favorites }}>
+        <contextData.Provider value={{ userID, token, fetchUserData, userData, fetchUserFavorites, favorites, fetchUserAds, userAdvertisements, adsIsLoading }}>
             {children}
         </contextData.Provider>
     )
