@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function UserOffers() {
     const { userID, token, fetchUserAds, adsIsLoading, userAdvertisements } = useContext(contextData);
+    console.log(userAdvertisements);
     const [isLoading, setisLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -59,7 +60,7 @@ export default function UserOffers() {
             {!adsIsLoading &&
                 <div className="advertisements_list">
                     {userAdvertisements.map((ad) => (
-                        <div key={ad.id_ads} className="advertisements_card">
+                        <div key={`${ad.category}_${ad.id_ads}`} className="advertisements_card">
                             <div className="card_image">
                                 <img
                                     src={`https://api.maaashi.com/storage${ad.images[0]}`}

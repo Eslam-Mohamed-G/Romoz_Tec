@@ -90,6 +90,16 @@
     justify-content: center;
 }
 
+@media (max-width: 640px) {
+    .advertisements_card {
+        flex-direction: column;
+    }
+    .advertisements_card .card_body {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+}
+
 /* ---------- المودال ---------- */
 .modal_overlay {
     position: fixed;
