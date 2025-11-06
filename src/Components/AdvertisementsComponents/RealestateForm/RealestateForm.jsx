@@ -66,7 +66,7 @@ export default function RealestateForm({ formik }) {
                     onBlur={handleBlur}
                     id="realestateInterface"
                     className='realestateInterface_input input'
-                    placeholder='أدخل الموديل'
+                    placeholder='أدخل الواجهة'
                 />
             </div>
         </div>
