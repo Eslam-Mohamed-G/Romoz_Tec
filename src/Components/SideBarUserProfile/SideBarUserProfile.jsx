@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
-import { PiSignOut } from "react-icons/pi";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "./SideBarStyle.css";
 
@@ -17,7 +16,7 @@ export default function SideBarUserProfile({ toggleSidebar, setToggleSidebar, si
         try {
             const token = cookie?.token?.data?.token;
             const response = await fetch(
-                "https://api.mashy.sand.alrmoz.com/api/logout",
+                "/api/logout",
                 {
                     method: "POST",
                     headers: {
@@ -128,11 +127,8 @@ export default function SideBarUserProfile({ toggleSidebar, setToggleSidebar, si
             {showConfirm && (
                 <div className="confirm_overlay">
                     <div className="confirm_box">
-                        <div className="link_icon">
-                            <img src="/Icons/SignOut.svg" alt="SignOut" />
-                        </div>
                         <h3 className="confirm_box_title">
-                            هل أنت متأكد أنك تريد تسجيل الخروج من حسابك؟
+                            هل تريد تسجيل الخروج من حسابك؟
                         </h3>
                         <p className="confirm_box_par">
                             يمكنك دائمًا تسجيل الدخول مرة أخرى لمتابعة نشاطك.
