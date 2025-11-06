@@ -1,41 +1,14 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "./SideBarStyle.css";
+import { contextData } from "../../Context/Context";
+import Logout from "../../Pages/Auth/Logout/Logout";
 
 export default function SideBarUserProfile({ toggleSidebar, setToggleSidebar, sidebarRef }) {
-    const [cookie, , removeCookie] = useCookies(["token"]);
-    const userID = cookie?.token?.data?.user?.id;
-
     const navigate = useNavigate();
 
     const [showConfirm, setShowConfirm] = useState(false);
-    const [error, setErrors] = useState("");
-
-    const handleLogout = async () => {
-        try {
-            const token = cookie?.token?.data?.token;
-            const response = await fetch(
-                "/api/logout",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${token}`,
-                    },
-                }
-            );
-
-            if (response.ok) {
-                removeCookie("token", { path: "/" });
-                navigate("/");
-            } else {
-                setErrors("حدث خطأ أثناء تسجيل الخروج");
-            }
-        } catch {
-            setErrors("حدث خطأ أثناء الاتصال بالسيرفر أثناء تسجيل الخروج");
-        }
-    };
 
     return (
         <div className={`userSideBar_container ${toggleSidebar ? "" : "hidden"}`} ref={sidebarRef}>
@@ -124,36 +97,7 @@ export default function SideBarUserProfile({ toggleSidebar, setToggleSidebar, si
                 </div>
             </div>
 
-            {showConfirm && (
-                <div className="confirm_overlay">
-                    <div className="confirm_box">
-                        <h3 className="confirm_box_title">
-                            هل تريد تسجيل الخروج من حسابك؟
-                        </h3>
-                        <p className="confirm_box_par">
-                            يمكنك دائمًا تسجيل الدخول مرة أخرى لمتابعة نشاطك.
-                        </p>
-                        <div className="confirm_actions">
-                            <button
-                                className="cancel_btn_confirm"
-                                onClick={() => setShowConfirm(false)}
-                            >
-                                إلغاء
-                            </button>
-                            <button
-                                className="confirm_btn"
-                                onClick={() => {
-                                    setShowConfirm(false);
-                                    handleLogout();
-                                }}
-                            >
-                                تسجيل الخروج
-                            </button>
-                            {error && <p className="error_message">{error}</p>}
-                        </div>
-                    </div>
-                </div>
-            )}
+            {showConfirm && (<Logout setShowConfirm={setShowConfirm}/>)}
         </div>
     );
 };

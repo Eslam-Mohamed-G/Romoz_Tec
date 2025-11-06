@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
-import { useNavigate } from 'react-router-dom';
 
 export const contextData = createContext();
 
@@ -66,34 +65,6 @@ export default function StoreContextProvider({ children }) {
             setFavorites(data?.data || {});
         } catch (err) {
             console.error(err);
-        }
-    };
-
-    // fun to handle logout
-    const navigate = useNavigate();
-    const handleLogout = async () => {
-        try {
-            const response = await fetch(
-                "/api/logout",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        Authorization: `Bearer ${token}`,
-                    },
-                }
-            );
-
-            if (response.ok) {
-                removeCookie("token", { path: "/" });
-                navigate("/");
-            } else {
-                alert("حدث خطأ أثناء تسجيل الخروج");
-                return false;
-            }
-        } catch {
-            alert("حدث خطأ أثناء الاتصال بالسيرفر أثناء تسجيل الخروج");
-            return false;
         }
     };
     return (
