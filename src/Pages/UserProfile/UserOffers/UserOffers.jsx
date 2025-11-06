@@ -7,7 +7,6 @@ import { useNavigate } from 'react-router-dom';
 
 export default function UserOffers() {
     const { userID, token, fetchUserAds, adsIsLoading, userAdvertisements } = useContext(contextData);
-    console.log(userAdvertisements);
     const [isLoading, setisLoading] = useState(false);
     const navigate = useNavigate();
 
