@@ -102,7 +102,7 @@ const Footer = () => {
           <MdOutlineHome />
           <span>الرئيسيه</span>
         </Link>
-        <Link>
+        <Link to="/userProfile/userFavorites">
           <MdFavoriteBorder />
           <span>المفضله</span>
         </Link>

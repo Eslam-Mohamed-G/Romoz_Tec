@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { timeSince } from '../../Pages/SpecificCategory/SpecificCategory';
 import { contextData } from '../../Context/Context';
 
-export default function AdCard({ category, adID, img, title, sellerName, userID, showUserImg = "true", userImg, area, created_at, price }) {
+export default function AdCard({ category, adID, img, title, sellerName, userID, showUserImg = "true", userImg, area, created_at, price, isFavorite = "false" }) {
     const { token } = useContext(contextData);
     const navigate = useNavigate();
 
@@ -65,7 +65,7 @@ export default function AdCard({ category, adID, img, title, sellerName, userID,
                 </div>
             }
 
-            <div className="card_body" style={{marginTop: showUserImg ?"0px" : "5px"}}>
+            <div className="card_body" style={{ marginTop: showUserImg ? "0px" : "5px" }}>
                 <h3>{title.substring(0, 16)}...</h3>
                 <div className="mapPin_timer">
                     <div className="mapPin">
@@ -88,7 +88,11 @@ export default function AdCard({ category, adID, img, title, sellerName, userID,
                     <span className=''>{price !== "0.00" ? price : "غير محدد"} ر.س</span>
                 </div>
                 <div className="hart_icon" onClick={(e) => { if (isLoading) return; toggleFavorite(e, adID); addToFavorites(category, adID) }}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 24 24" fill={favorites[adID] ? "red" : "none"} stroke={favorites[adID] ? "red" : "currentColor"} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
+                    {isFavorite ?
+                        <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 24 24" fill={favorites[adID] ? "red" : "none"} stroke={favorites[adID] ? "red" : "currentColor"} strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-heart-icon lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg>
+                        :
+                        <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="red" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-trash-icon lucide-trash"><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6" /><path d="M3 6h18" /><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
+                    }
                 </div>
             </div>
         </div>

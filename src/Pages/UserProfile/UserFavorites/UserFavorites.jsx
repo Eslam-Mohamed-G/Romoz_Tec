@@ -5,7 +5,7 @@ import AdCard from '../../../Components/AdCard/AdCard';
 
 export default function UserFavorites() {
     const { fetchUserFavorites, favorites, token } = useContext(contextData);
-
+console.log(favorites);
     useEffect(() => {
         fetchUserFavorites();
     }, [token]);
@@ -31,6 +31,7 @@ export default function UserFavorites() {
                             area={favorite?.user?.area}
                             created_at={favorite?.created_at}
                             price={favorite?.information?.price}
+                            isFavorite= {false}
                         />
                     ))
                 ) : (
