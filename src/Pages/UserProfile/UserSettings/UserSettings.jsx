@@ -3,6 +3,7 @@ import "./userSettingsStyle.css"
 import { contextData } from '../../../Context/Context';
 import { useFormik } from 'formik';
 import * as Yup from "yup";
+import LocationForm from '../../../Components/LocationForm/LocationForm';
 
 export default function UserSettings() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);
@@ -307,6 +308,8 @@ export default function UserSettings() {
                             </button>
                         </div>
                     </form>
+
+                    <LocationForm/>
                 </div>
             </div>
         </section>
