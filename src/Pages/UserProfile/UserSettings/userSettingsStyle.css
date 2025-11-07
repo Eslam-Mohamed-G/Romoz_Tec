@@ -24,6 +24,13 @@
 .userSettings_body_header_content li {
     white-space: nowrap;
     cursor: pointer;
+    padding: 5px;
+}
+
+.userSettings_body_header_content li.active {
+    background-color: #AAFFEE80;
+    color: var(--main-color);
+    border-radius: var(--radius-sm);
 }
 
 .userSettings_body_container {
@@ -150,6 +157,7 @@
     flex-direction: row;
     gap: 15px;
 }
+
 .Settings_user_form .two_buttons .cancel_button {
     background-color: var(--color);
     color: red;
