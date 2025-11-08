@@ -94,7 +94,7 @@ export default function UserOffers() {
 
                                 <div className="card_buttons">
                                     <button className="edit_btn">تعديل</button>
-                                    <button className="delete_btn" onClick={() => {
+                                    <button className="card_delete_btn" onClick={() => {
                                         setSelectedAd({
                                             id: ad.id_ads,
                                             category: ad.category,
