@@ -10,7 +10,6 @@ import { categories } from "../Advertisements/Category/Category";
 import { timeSince } from "../SpecificCategory/SpecificCategory";
 import { CiFlag1 } from "react-icons/ci";
 import { attributeMapForDetails } from "../../data";
-import { BASE_URL_image } from "../../config/api";
 
 const DetailsLayout = () => {
   const [loginModel, setLoginModel] = useState(false);
