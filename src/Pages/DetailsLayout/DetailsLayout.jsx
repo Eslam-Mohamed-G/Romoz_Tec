@@ -129,7 +129,7 @@ const DetailsLayout = () => {
             <div className="details-lay-image-thumbs">
               {images.length > 0 &&
                 images.map((img, index) => {
-                  const fullImg = `${BASE_URL_image}/${img}`;
+                  const fullImg = `https://api.maaashi.com/storage/${img}`;
                   return (
                     <img
                       key={index}

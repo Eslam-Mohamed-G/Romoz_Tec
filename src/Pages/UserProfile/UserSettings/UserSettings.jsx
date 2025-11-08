@@ -159,7 +159,7 @@ export default function UserSettings() {
                                                     handleImageUpload(
                                                         e,
                                                         "cover_image",
-                                                        `${BASE_URL}/cover-image`
+                                                        `https://api.maaashi.com/api/cover-image`
                                                     )
                                                 }
                                                 disabled={imageLoading}
@@ -200,7 +200,7 @@ export default function UserSettings() {
                                                     handleImageUpload(
                                                         e,
                                                         "profile_image",
-                                                        `${BASE_URL}/profile-image`
+                                                        `https://api.maaashi.com/api/profile-image`
                                                     )
                                                 }
                                                 disabled={imageLoading}

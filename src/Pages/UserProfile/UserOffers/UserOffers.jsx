@@ -18,7 +18,7 @@ export default function UserOffers() {
     const deleteAdById = async (category, adId) => {
         try {
             setDeleting(true);
-            const response = await fetch(`${BASE_URL}/profile/ealans/${category}/${adId}`, {
+            const response = await fetch(`https://api.maaashi.com/api/profile/ealans/${category}/${adId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`,

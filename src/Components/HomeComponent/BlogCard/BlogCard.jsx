@@ -13,7 +13,7 @@ export default function BlogCard() {
     const fetchRandomEalans = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`${BASE_URL}/ealans/random`);
+        const res = await fetch(`https://api.maaashi.com/api/ealans/random`);
 
         const data = await res.json();
 

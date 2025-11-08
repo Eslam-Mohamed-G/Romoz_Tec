@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useCookies } from "react-cookie";
-import { BASE_URL } from "../../../config/api";
 
 export default function Login() {
 

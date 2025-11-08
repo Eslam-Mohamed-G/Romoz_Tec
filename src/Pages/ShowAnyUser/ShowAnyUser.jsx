@@ -17,7 +17,7 @@ export default function ShowAnyUser() {
         const fetchUserData = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch(`${BASE_URL}/showAnyUserData/${userID}`, { method: "GET", });
+                const response = await fetch(`https://api.maaashi.com/api/showAnyUserData/${userID}`, { method: "GET", });
 
                 const data = await response.json();
                 if (data.success) {

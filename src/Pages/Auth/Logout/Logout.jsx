@@ -3,7 +3,6 @@ import { contextData } from '../../../Context/Context';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
 import "./logoutStyle.css"
-import { BASE_URL } from '../../../config/api';
 
 export default function Logout({ setShowConfirm }) {
     const { token } = useContext(contextData);
@@ -13,7 +12,7 @@ export default function Logout({ setShowConfirm }) {
     const handleLogout = async () => {
         try {
             setLogoutIsLoading(true);
-            const response = await fetch(`${BASE_URL}/logout`,
+            const response = await fetch(`https://api.maaashi.com/api/logout`,
                 {
                     method: "POST",
                     headers: {
