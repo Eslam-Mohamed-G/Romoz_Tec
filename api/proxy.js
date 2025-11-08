@@ -5,10 +5,15 @@ export default async function handler(req, res) {
         const path = req.query.path ? "/" + req.query.path.join("/") : "";
         const url = `${process.env.VITE_API_URL}${path}`;
 
-        const body =
-            req.method === "GET" || req.method === "HEAD"
-                ? undefined
-                : JSON.stringify(req.body);
+        // قراءة body بشكل صحيح
+        let body;
+        if (req.method !== "GET" && req.method !== "HEAD") {
+            let data = "";
+            for await (const chunk of req) {
+                data += chunk;
+            }
+            body = data || undefined;
+        }
 
         const response = await fetch(url, {
             method: req.method,
@@ -20,7 +25,6 @@ export default async function handler(req, res) {
 
         const text = await response.text();
         let data;
-
         try {
             data = JSON.parse(text);
         } catch {
