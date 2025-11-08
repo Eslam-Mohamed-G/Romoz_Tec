@@ -16,7 +16,8 @@ export default function DeleteAcount() {
     const handleDeleteAccount = async () => {
         setIsLoading(true);
         try {
-            const resp = await fetch("/api/profile/delete", {
+            const baseUrl = import.meta.env.VITE_API_URL;
+            const response = await fetch(`${baseUrl}/profile/delete`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -26,7 +27,7 @@ export default function DeleteAcount() {
 
             const data = await resp.json();
 
-            if (resp.ok && data.success) {
+            if (response.ok && data.success) {
                 return true;
             } else {
                 alert("حدث خطأ أثناء حذف الحساب");

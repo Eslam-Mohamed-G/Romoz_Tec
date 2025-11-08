@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./blogCardStyle.css";
 import AdCard from "../../AdCard/AdCard";
 import SkeletonCard from "../../SkeletonCard/SkeletonCard";
+import { BASE_URL } from "../../../config/api";
 
 export default function BlogCard() {
   const [adsCard, setAdsCard] = useState([]);
@@ -12,9 +13,7 @@ export default function BlogCard() {
     const fetchRandomEalans = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(
-          "/api/ealans/random"
-        );
+        const res = await fetch(`${BASE_URL}/ealans/random`);
 
         const data = await res.json();
 

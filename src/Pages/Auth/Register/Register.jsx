@@ -48,8 +48,8 @@ export default function Register() {
         setIsLoading(true);
         setErrorMessage("");
         // url from vite.config
-        const response = await fetch(
-          "/api/register",
+        const baseUrl = import.meta.env.VITE_API_URL;
+        const response = await fetch(`${baseUrl}/register`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

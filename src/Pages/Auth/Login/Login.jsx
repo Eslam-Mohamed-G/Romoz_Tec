@@ -52,9 +52,8 @@ export function LoginForm() {
       setIsLoading(true);
       setErrorMessage("");
       try {
-        // url from vite.config
-        const response = await fetch(
-          "/api/login",
+        const baseUrl = import.meta.env.VITE_API_URL;
+        const response = await fetch(`${baseUrl}/login`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

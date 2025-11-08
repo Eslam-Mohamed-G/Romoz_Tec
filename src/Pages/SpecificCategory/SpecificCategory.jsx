@@ -7,6 +7,7 @@ import NotFound from '../../Components/NotFound/NotFound';
 import DatePicker from '../../Components/DatePicker/DatePicker';
 import AdCard from '../../Components/AdCard/AdCard';
 import "./specificCategoryStyle.css"
+import { BASE_URL } from '../../config/api';
 
 export default function SpecificCategory() {
     const { category } = useParams();
@@ -62,9 +63,10 @@ export default function SpecificCategory() {
     useEffect(() => {
         window.scrollTo(0, 0);
         const fetchCategoryData = async () => {
+            setIsLoading(true);
+            setErrorMessage(false);
             try {
-                setIsLoading(true)
-                const response = await fetch(`https://api.maaashi.com/api/ealans?category=${category}&per_page=20`);
+                const response = await fetch(`${BASE_URL}/ealans?category=${category}&per_page=20`);
                 const data = await response.json();
                 if (data.success) {
                     setCategoryData(data.data.data.ads);
