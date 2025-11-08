@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
+import { BASE_URL } from '../config/api';
 
 export const contextData = createContext();
 
@@ -11,7 +12,7 @@ export default function StoreContextProvider({ children }) {
     const fetchUserData = async () => {
         try {
             // url from vite.config
-            const response = await fetch(`/api/user/${userID}`, {
+            const response = await fetch(`${BASE_URL}/user/${userID}`, {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -32,8 +33,7 @@ export default function StoreContextProvider({ children }) {
         try {
             setadsIsLoading(true);
 
-            const response = await fetch(
-                "https://api.maaashi.com/api/profile/ealans",
+            const response = await fetch(`${BASE_URL}/profile/ealans`,
                 {
                     method: "GET",
                     headers: {
@@ -56,7 +56,7 @@ export default function StoreContextProvider({ children }) {
     const [favorites, setFavorites] = useState({});
     const fetchUserFavorites = async () => {
         try {
-            const res = await fetch("/api/favorites", {
+            const res = await fetch(`${BASE_URL}/favorites`, {
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
             });
