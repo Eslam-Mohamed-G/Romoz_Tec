@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useCookies } from "react-cookie";
+import { BASE_URL } from "../../../config/api";
 
 export default function Login() {
 
@@ -52,8 +53,7 @@ export function LoginForm() {
       setIsLoading(true);
       setErrorMessage("");
       try {
-        const baseUrl = import.meta.env.VITE_API_URL;
-        const response = await fetch(`${baseUrl}/login`,
+        const response = await fetch(`${BASE_URL}/login`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
