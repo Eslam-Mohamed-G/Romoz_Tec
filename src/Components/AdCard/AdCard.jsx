@@ -3,7 +3,7 @@ import "./adCardStyle.css"
 import { useNavigate } from 'react-router-dom';
 import { timeSince } from '../../Pages/SpecificCategory/SpecificCategory';
 import { contextData } from '../../Context/Context';
-import { BASE_URL_image } from '../../config/api';
+import { BASE_URL, BASE_URL_image } from '../../config/api';
 
 export default function AdCard({ category, adID, img, title, sellerName, userID, showUserImg = "true", userImg, area, created_at, price, isFavorite = "false" }) {
     const { token } = useContext(contextData);
@@ -24,8 +24,7 @@ export default function AdCard({ category, adID, img, title, sellerName, userID,
     const addToFavorites = async (category, adId) => {
         try {
             setIsLoading(true);
-            const response = await fetch(
-                `/api/favorites/${category}/${adId}`,
+            const response = await fetch(`${BASE_URL}/favorites/${category}/${adId}`,
                 {
                     method: "post",
                     headers: {

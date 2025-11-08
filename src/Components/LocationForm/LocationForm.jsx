@@ -5,6 +5,7 @@ import axios from 'axios';
 import "./locationFormStyle.css";
 import { contextData } from '../../Context/Context';
 import { saudiRegions } from '../../data';
+import { BASE_URL } from '../../config/api';
 
 export default function LocationForm() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);
@@ -37,8 +38,7 @@ export default function LocationForm() {
             setServerMessage(null);
 
             try {
-                const res = await axios.post(
-                    "/api/complete-location",
+                const res = await axios.post(`${BASE_URL}/complete-location`,
                     values,
                     { headers: { Authorization: `Bearer ${token}` } }
                 );

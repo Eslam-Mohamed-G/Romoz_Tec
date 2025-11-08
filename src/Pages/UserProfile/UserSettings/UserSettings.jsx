@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import * as Yup from "yup";
 import LocationForm from '../../../Components/LocationForm/LocationForm';
 import DeleteAcount from '../../Auth/DeleteAcount/DeleteAcount';
+import { BASE_URL } from '../../../config/api';
 
 export default function UserSettings() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);
@@ -158,7 +159,7 @@ export default function UserSettings() {
                                                     handleImageUpload(
                                                         e,
                                                         "cover_image",
-                                                        "/api/cover-image"
+                                                        `${BASE_URL}/cover-image`
                                                     )
                                                 }
                                                 disabled={imageLoading}
@@ -199,7 +200,7 @@ export default function UserSettings() {
                                                     handleImageUpload(
                                                         e,
                                                         "profile_image",
-                                                        "/api/profile-image"
+                                                        `${BASE_URL}/profile-image`
                                                     )
                                                 }
                                                 disabled={imageLoading}

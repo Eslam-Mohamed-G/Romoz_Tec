@@ -4,6 +4,7 @@ import { timeSince } from '../../SpecificCategory/SpecificCategory';
 import SkeletonCard from '../../../Components/SkeletonCard/SkeletonCard';
 import "./userOffersStyle.css"
 import { useNavigate } from 'react-router-dom';
+import { BASE_URL, BASE_URL_image } from '../../../config/api';
 
 export default function UserOffers() {
     const { userID, token, fetchUserAds, adsIsLoading, userAdvertisements } = useContext(contextData);
@@ -17,7 +18,7 @@ export default function UserOffers() {
     const deleteAdById = async (category, adId) => {
         try {
             setDeleting(true);
-            const response = await fetch(`/api/profile/ealans/${category}/${adId}`, {
+            const response = await fetch(`${BASE_URL}/profile/ealans/${category}/${adId}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`,
@@ -62,7 +63,7 @@ export default function UserOffers() {
                         <div key={`${ad.category}_${ad.id_ads}`} className="advertisements_card">
                             <div className="card_image">
                                 <img
-                                    src={`https://api.maaashi.com/storage${ad.images[0]}`}
+                                    src={`${BASE_URL_image}/${ad.images[0]}`}
                                     alt={ad.user.user_name}
                                     className="ad_image"
                                 />

@@ -4,6 +4,7 @@ import SkeletonCard from '../../Components/SkeletonCard/SkeletonCard';
 import NotFound from '../../Components/NotFound/NotFound';
 import AdCard from '../../Components/AdCard/AdCard';
 import "./showAnyUserStyle.css"
+import { BASE_URL } from '../../config/api';
 
 export default function ShowAnyUser() {
     const { userID } = useParams();
@@ -16,7 +17,7 @@ export default function ShowAnyUser() {
         const fetchUserData = async () => {
             try {
                 setIsLoading(true);
-                const response = await fetch(`/api/showAnyUserData/${userID}`, { method: "GET", });
+                const response = await fetch(`${BASE_URL}/showAnyUserData/${userID}`, { method: "GET", });
 
                 const data = await response.json();
                 if (data.success) {

@@ -10,6 +10,7 @@ import { categories } from "../Advertisements/Category/Category";
 import { timeSince } from "../SpecificCategory/SpecificCategory";
 import { CiFlag1 } from "react-icons/ci";
 import { attributeMapForDetails } from "../../data";
+import { BASE_URL_image } from "../../config/api";
 
 const DetailsLayout = () => {
   const [loginModel, setLoginModel] = useState(false);
@@ -128,7 +129,7 @@ const DetailsLayout = () => {
             <div className="details-lay-image-thumbs">
               {images.length > 0 &&
                 images.map((img, index) => {
-                  const fullImg = `https://api.maaashi.com/storage/${img}`;
+                  const fullImg = `${BASE_URL_image}/${img}`;
                   return (
                     <img
                       key={index}
