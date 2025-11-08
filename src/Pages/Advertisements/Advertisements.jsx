@@ -195,8 +195,8 @@ export default function Advertisements() {
                 if (formik.values.category === "anecdotes") {
                     formData.append("information[anecdotes][anecdoteType]", formik.values.information.anecdotes.moreInfo);
                 }
-                const baseUrl = import.meta.env.VITE_API_URL;
-                const response = await axios.post(`${baseUrl}/ealans`,
+
+                const response = await axios.post(`https://api.maaashi.com/api/ealans`,
                     formData,
                     {
                         headers: {

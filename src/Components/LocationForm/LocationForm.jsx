@@ -38,7 +38,7 @@ export default function LocationForm() {
             setServerMessage(null);
 
             try {
-                const res = await axios.post(`${BASE_URL}/complete-location`,
+                const res = await axios.post(`https://api.maaashi.com/api/complete-location`,
                     values,
                     { headers: { Authorization: `Bearer ${token}` } }
                 );
