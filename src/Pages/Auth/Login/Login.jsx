@@ -53,7 +53,7 @@ export function LoginForm() {
       setIsLoading(true);
       setErrorMessage("");
       try {
-        const response = await fetch(`${BASE_URL}/login`,
+        const response = await fetch(`https://api.maaashi.com/api/login`,
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
