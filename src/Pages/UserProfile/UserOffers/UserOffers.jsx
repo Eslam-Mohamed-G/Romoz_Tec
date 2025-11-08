@@ -62,7 +62,7 @@ export default function UserOffers() {
                         <div key={`${ad.category}_${ad.id_ads}`} className="advertisements_card">
                             <div className="card_image">
                                 <img
-                                    src={`${BASE_URL_image}/${ad.images[0]}`}
+                                    src={`https://api.maaashi.com/storage/${ad.images[0]}`}
                                     alt={ad.user.user_name}
                                     className="ad_image"
                                 />
