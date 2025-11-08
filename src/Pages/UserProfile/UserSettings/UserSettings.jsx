@@ -4,6 +4,7 @@ import { contextData } from '../../../Context/Context';
 import { useFormik } from 'formik';
 import * as Yup from "yup";
 import LocationForm from '../../../Components/LocationForm/LocationForm';
+import DeleteAcount from '../../Auth/DeleteAcount/DeleteAcount';
 
 export default function UserSettings() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);
@@ -315,6 +316,7 @@ export default function UserSettings() {
                     )}
 
                     {showContent === "location" && (<LocationForm />)}
+                    {showContent === "deleteProfile" && (<DeleteAcount />)}
 
                 </div>
             </div>
