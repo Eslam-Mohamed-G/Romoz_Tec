@@ -4,7 +4,6 @@ import SkeletonCard from '../../Components/SkeletonCard/SkeletonCard';
 import NotFound from '../../Components/NotFound/NotFound';
 import AdCard from '../../Components/AdCard/AdCard';
 import "./showAnyUserStyle.css"
-import { BASE_URL } from '../../config/api';
 
 export default function ShowAnyUser() {
     const { userID } = useParams();

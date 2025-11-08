@@ -5,7 +5,6 @@ import { useFormik } from 'formik';
 import * as Yup from "yup";
 import LocationForm from '../../../Components/LocationForm/LocationForm';
 import DeleteAcount from '../../Auth/DeleteAcount/DeleteAcount';
-import { BASE_URL } from '../../../config/api';
 
 export default function UserSettings() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);

@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { useCookies } from 'react-cookie';
-import { BASE_URL } from '../config/api';
 
 export const contextData = createContext();
 

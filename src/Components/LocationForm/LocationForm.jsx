@@ -5,7 +5,6 @@ import axios from 'axios';
 import "./locationFormStyle.css";
 import { contextData } from '../../Context/Context';
 import { saudiRegions } from '../../data';
-import { BASE_URL } from '../../config/api';
 
 export default function LocationForm() {
     const { userID, token, fetchUserData, userData } = useContext(contextData);

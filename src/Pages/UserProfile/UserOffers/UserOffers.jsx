@@ -4,7 +4,6 @@ import { timeSince } from '../../SpecificCategory/SpecificCategory';
 import SkeletonCard from '../../../Components/SkeletonCard/SkeletonCard';
 import "./userOffersStyle.css"
 import { useNavigate } from 'react-router-dom';
-import { BASE_URL, BASE_URL_image } from '../../../config/api';
 
 export default function UserOffers() {
     const { userID, token, fetchUserAds, adsIsLoading, userAdvertisements } = useContext(contextData);

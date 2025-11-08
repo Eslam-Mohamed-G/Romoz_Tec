@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./blogCardStyle.css";
 import AdCard from "../../AdCard/AdCard";
 import SkeletonCard from "../../SkeletonCard/SkeletonCard";
-import { BASE_URL } from "../../../config/api";
 
 export default function BlogCard() {
   const [adsCard, setAdsCard] = useState([]);

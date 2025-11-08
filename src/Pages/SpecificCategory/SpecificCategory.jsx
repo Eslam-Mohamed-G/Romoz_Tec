@@ -7,7 +7,6 @@ import NotFound from '../../Components/NotFound/NotFound';
 import DatePicker from '../../Components/DatePicker/DatePicker';
 import AdCard from '../../Components/AdCard/AdCard';
 import "./specificCategoryStyle.css"
-import { BASE_URL } from '../../config/api';
 
 export default function SpecificCategory() {
     const { category } = useParams();
