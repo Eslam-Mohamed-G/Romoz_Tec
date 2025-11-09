@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./detailsLayout.css";
-
-// Icons
-import { FaRegCommentDots } from "react-icons/fa6";
-import { AiOutlineSend, AiOutlineLike } from "react-icons/ai";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { categories } from "../Advertisements/Category/Category";
 import { timeSince } from "../SpecificCategory/SpecificCategory";
-import { CiFlag1 } from "react-icons/ci";
 import { attributeMapForDetails } from "../../data";
 
 const DetailsLayout = () => {
