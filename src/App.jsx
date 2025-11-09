@@ -58,7 +58,7 @@ const router = createBrowserRouter([
 const App = () => {
   return (
     <StoreContextProvider>
-      <Suspense fallback={<div className="loader">جارٍ تحميل الصفحة...</div>}>
+      <Suspense fallback={<div className="mainLoader">جارٍ تحميل الصفحة...</div>}>
         <RouterProvider router={router} />
       </Suspense>
     </StoreContextProvider>

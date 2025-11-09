@@ -1,7 +1,6 @@
 import React from "react";
 import "./sellSeactionStyle.css";
 import { Link } from "react-router-dom";
-import { FaCheckCircle } from "react-icons/fa";
 
 const SellSeaction = () => {
   return (
@@ -11,22 +10,30 @@ const SellSeaction = () => {
         <p className="sell-subtitle">
           وصل إعلانك لآلاف المشترين في دقائق... ابدأ الآن واعرض منتجاتك بسهولة
         </p>
-        <Link to="/add-offer" className="sell-btn">
+        <Link to="/advertisements" className="sell-btn">
           أضف عرضك
         </Link>
         <div className="sell-features">
-          <span>
-            آمن وموثوق
-            <FaCheckCircle className="sell-icon" />
-          </span>
-          <span>
-            ظهور فوري
-            <FaCheckCircle className="sell-icon" />
-          </span>
-          <span>
-            النشر مجاني
-            <FaCheckCircle className="sell-icon" />
-          </span>
+          <div className="sell_features_content">
+            <div className="sell_features_icon">
+              <img src="Icons/Check.svg" alt="Check" />
+            </div>
+            <span>آمن وموثوق</span>
+          </div>
+          
+          <div className="sell_features_content">
+            <div className="sell_features_icon">
+              <img src="Icons/Check.svg" alt="Check" />
+            </div>
+            <span>ظهور فوري</span>
+          </div>
+          
+          <div className="sell_features_content">
+            <div className="sell_features_icon">
+              <img src="Icons/Check.svg" alt="Check" />
+            </div>
+            <span>النشر مجاني</span>
+          </div>
         </div>
       </div>
     </section>

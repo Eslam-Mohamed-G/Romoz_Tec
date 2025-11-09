@@ -2,20 +2,22 @@
   background-color: var(--yellow-color);
   padding: 50px 20px;
   text-align: center;
-  margin: 40px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+
 .sell-title {
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #222;
 }
+
 .sell-subtitle {
   font-size: 16px;
   color: #555;
   margin-bottom: 25px;
 }
+
 .sell-btn {
   display: inline-block;
   padding: 12px 25px;
@@ -28,10 +30,12 @@
   width: 200px;
   transition: 0.3s ease;
 }
+
 .sell-btn:hover {
   background-color: var(--hover-color);
   color: var(--color);
 }
+
 .sell-features {
   display: flex;
   justify-content: center;
@@ -39,20 +43,21 @@
   margin-top: 25px;
   flex-wrap: wrap;
 }
-.sell-features span {
+
+.sell_features_content,
+.sell_features_icon {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 6px;
-  font-size: 14px;
-  color: #333;
-}
-.sell-icon {
-  color: var(--main-color);
-  font-size: 18px;
+  justify-content: center;
 }
 
- @media (max-width: 768px) {
+.sell_features_content {
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
   .sell-section {
     display: none;
   }
- }
+}
