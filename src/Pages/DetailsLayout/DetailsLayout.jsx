@@ -272,43 +272,6 @@ const DetailsLayout = () => {
             </div>
           </div>
         </div>
-
-        {/* footer التعليقات */}
-        <div className="details_footer_comments">
-          <h3 className="details-lay-comments-title">التعليقات</h3>
-          <p className="details-lay-comments-info">شارك رايك او اسفسارك حول هذا الاعلان</p>
-
-          {/* كتابة تعليق */}
-          <div className="details-lay-comments-user">
-            <img src="/images/logo.svg" alt="User" />
-            <input type="text" placeholder="اكتب تعليقك هنا..." />
-          </div>
-
-          <div className="details-lay-comments-actions">
-            <button><AiOutlineSend /> اضافه تعليق</button>
-          </div>
-
-          {/* قائمة التعليقات */}
-          <div className="details-lay-comments-list">
-            <div className="details-lay-comments-list-item">
-              <img src="/images/logo.svg" alt="User" className="details-lay-comments-list-item-img" />
-              <div className="details-lay-comments-list-item-content">
-                <div className="details-lay-comments-list-item-header">
-                  <span className="details-lay-comments-list-item-name">احمد محمد</span>
-                  <span className="details-lay-comments-list-item-date">منذ ساعه</span>
-                </div>
-                <p className="details-lay-comments-list-item-text-info">
-                  هذا المنتج رائع جداً، أنصح به بشدة. الجودة عالية والسعر مناسب.
-                </p>
-                <div className="details-lay-comments-list-item-text-actions">
-                  <span> <AiOutlineLike />اعجاب</span>
-                  <span> <FaRegCommentDots />رد</span>
-                  <span> <CiFlag1 />ابلاغ</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* <!----------- Modal -----------> */}
