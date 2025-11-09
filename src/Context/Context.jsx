@@ -52,6 +52,7 @@ export default function StoreContextProvider({ children }) {
     };
 
     // handle favorite toggle
+    const [showFavoriteToast, setShowFavoriteToast] = useState(false);
     const [favorites, setFavorites] = useState({});
     const fetchUserFavorites = async () => {
         try {
@@ -67,7 +68,7 @@ export default function StoreContextProvider({ children }) {
         }
     };
     return (
-        <contextData.Provider value={{ userID, token, fetchUserData, userData, fetchUserFavorites, favorites, fetchUserAds, userAdvertisements, adsIsLoading }}>
+        <contextData.Provider value={{ userID, token, fetchUserData, userData, fetchUserFavorites, favorites, fetchUserAds, userAdvertisements, adsIsLoading, showFavoriteToast, setShowFavoriteToast }}>
             {children}
         </contextData.Provider>
     )

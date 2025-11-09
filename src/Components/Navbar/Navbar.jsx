@@ -1,12 +1,11 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import "./header.css";
 import { Link, NavLink } from "react-router-dom";
-import { useCookies } from "react-cookie";
 import { contextData } from "../../Context/Context";
 import Logout from "../../Pages/Auth/Logout/Logout";
 
 export default function Navbar() {
-  const { userID, token, fetchUserData, userData } = useContext(contextData);
+  const { userID, token, fetchUserData, userData, showFavoriteToast, setShowFavoriteToast } = useContext(contextData);
   const isLoggedIn = Boolean(token && token !== "undefined");
   const [showToast, setShowToast] = useState(true);
   const [showConfirm, setShowConfirm] = useState(false);
@@ -154,6 +153,7 @@ export default function Navbar() {
         </div>
       </div>
       {isLoggedIn && showToast && userData?.area === null && (<ToastWarning message="الرجاء إضافة الموقع قبل المتابعة." onClose={() => setShowToast(false)} />)}
+      {showFavoriteToast && (<ToastWarning message="قم بتسجيل الدخول أولاً" onClose={() => setShowFavoriteToast(false)}/>)}
       {showConfirm && (<Logout setShowConfirm={setShowConfirm} />)}
     </header>
   );
