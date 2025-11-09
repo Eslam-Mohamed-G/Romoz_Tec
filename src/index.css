@@ -113,6 +113,13 @@ a:hover {
     position: relative;
 }
 
+.input_label .error_message {
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
 .input_field {
     position: relative;
 }
@@ -139,6 +146,21 @@ a:hover {
 .input::placeholder, textarea::placeholder {
     color: #727272;
     font-size: var(--font-size-sm);
+}
+
+.input_icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.input_icon img {
+    width: 24px;
+    height: 24px;
 }
 
 label {

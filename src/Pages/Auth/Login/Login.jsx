@@ -1,28 +1,31 @@
 import React, { useState } from "react";
-import "./loginStyle.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useCookies } from "react-cookie";
+import "./loginStyle.css";
 
 export default function Login() {
 
   return (
     <div className="login-wrapper">
-      <div className="login-image">
-        <img src="/images/login.webp" alt="login" />
-      </div>
-      <div className="login-container">
-        <h2>مرحبًا بك مجددًا</h2>
-        <p>
-          مرحبًا بك من جديد! قم بتسجيل الدخول إلى حسابك على ماشي لتتابع إعلاناتك
-          المنشورة، وتدير منتجاتك أو خدماتك بسهولة.
-        </p>
+      <div className="top_line" />
+      <div className="login_box">
+        <div className="login-image">
+          <img src="/images/login.webp" alt="login" />
+        </div>
+        <div className="login-container">
+          <h2>مرحبًا بك مجددًا</h2>
+          <p>
+            مرحبًا بك من جديد! قم بتسجيل الدخول إلى حسابك على ماشي لتتابع إعلاناتك
+            المنشورة، وتدير منتجاتك أو خدماتك بسهولة.
+          </p>
 
-        <LoginForm />
-        <p className="login_footer">
-          ليس لديك حساب بعد؟ <Link to="/register">إنشاء حساب</Link>
-        </p>
+          <LoginForm />
+          <p className="login_footer">
+            ليس لديك حساب بعد؟ <Link to="/register">إنشاء حساب</Link>
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -88,44 +91,50 @@ export function LoginForm() {
   });
   return (
     <form className="login_form" onSubmit={formik.handleSubmit}>
-      <div className="email_input">
-        <label htmlFor="email">
+      <div className="input_container">
+        <label htmlFor="email" className="input_label">
           <span>بريدك الإلكتروني</span>
           {formik.touched.email && formik.errors.email && (
             <p className="error_message">{formik.errors.email}</p>
           )}
         </label>
-        <div className="input_container">
+
+        <div className="input_field">
           <input
             type="email"
             name="email"
+            className='input'
             placeholder="بريدك الإلكتروني"
             autoComplete="email"
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          <img src="/Icons/Auth/email.svg" alt="email" />
+          <div className="input_icon">
+            <img src="/Icons/Auth/email.svg" alt="email" />
+          </div>
         </div>
       </div>
 
-      <div className="password_input">
-        <label htmlFor="password">
+      <div className="input_container">
+        <label htmlFor="password" className="input_label">
           <span>كلمة المرور</span>
           {formik.touched.password && formik.errors.password && (
             <p className="error_message">{formik.errors.password}</p>
           )}
         </label>
-        <div className="password_input_container">
+
+        <div className="input_field">
           <input
             type={showPassword ? "text" : "password"}
             name="password"
+            className='input'
             placeholder="كلمة المرور"
             value={formik.values.password}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          <div className="eye_icon" onClick={() => setShowPassword(!showPassword)} aria-label={showPassword ? "إخفاء كلمة المرور" : "عرض كلمة المرور"}>
+          <div className="input_icon" onClick={() => setShowPassword(!showPassword)} aria-label={showPassword ? "إخفاء كلمة المرور" : "عرض كلمة المرور"}>
             {showPassword ?
               <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-eye-icon lucide-eye"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" /><circle cx={12} cy={12} r={3} /></svg>
               :
@@ -155,6 +164,7 @@ export function LoginForm() {
           <Link to="/forgotPassword">نسيت كلمة المرور؟</Link>
         </div>
       </div>
+
       <button type="submit" className="login_button" disabled={isLoading}>
         {isLoading ? "جاري التحميل..." : "تسجيل دخول"}
       </button>
