@@ -8,7 +8,7 @@ export default function LoginRequiredCard() {
             <div className="top_line"/>
             <div className="card">
                 <div className="img_wrapper">
-                    <img src="images/unauthenticated.webp" alt="loginRequiredCard" />
+                    <img src="/images/unauthenticated.webp" alt="loginRequiredCard" />
                 </div>
 
                 <div className="">
