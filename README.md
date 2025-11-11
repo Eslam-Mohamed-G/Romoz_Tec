@@ -13,9 +13,9 @@
 
 - **Screenshots**
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <img src="./public/preview/register.webp" style="width: 45%; height: 220px; object-fit: cover;"/>
-  <img src="./public/preview/login.webp" style="width: 45%; height: 220px; object-fit: cover;"/>
-  <img src="./public/preview/forgotPassword.webp" style="width: 45%; height: 220px; object-fit: cover;"/>
+  <img src="./public/preview/register.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+  <img src="./public/preview/login.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+  <img src="./public/preview/forgotPassword.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
 </div>
 
 
