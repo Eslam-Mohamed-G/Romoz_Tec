@@ -20,6 +20,17 @@
   <img src="./public/preview/forgotPassword.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
 </div>
 
+- 👤 **User Profile**  
+  Each user has a personal profile page where they can view and manage their posted ads and personal information.
+- **📸 Preview**
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+  <img src="./public/preview/UserProfile.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+  <img src="./public/preview/UserProfile-faveorit.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+  <img src="./public/preview/UserProfile-setting.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+  <img src="./public/preview/UserProfile-location.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+  <img src="./public/preview/UserProfile-deleteAcount.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+</div>
+
 - 📝 **Post Advertisements**  
   After creating an account, users can add their own ads with product details and images.
 - **📸 Preview**
@@ -31,16 +42,6 @@
   <img src="./public/preview/Advertisements-conferm.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
 </div>
 
-- 👤 **User Profile**  
-  Each user has a personal profile page where they can view and manage their posted ads and personal information.
-- **📸 Preview**
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <img src="./public/preview/UserProfile.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
-  <img src="./public/preview/UserProfile-faveorit.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
-  <img src="./public/preview/UserProfile-setting.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
-  <img src="./public/preview/UserProfile-location.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
-  <img src="./public/preview/UserProfile-deleteAcount.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
-</div>
 - 🗂️ **Category-Based Browsing**  
   Users can browse and filter ads based on specific categories (e.g., Cars, Electronics, Real Estate, etc.).
 - **📸 Preview**
@@ -58,9 +59,9 @@
 - 📱 **Responsive UI**  
   The website is fully responsive and works seamlessly across all devices.
   - **📸 Preview**
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-  <img src="./public/preview/maaashi-mobile-1.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
-  <img src="./public/preview/maaashi-mobile-2.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+  <img src="./public/preview/maaashi-mobile-1.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 900px; object-fit: cover;"/>
+  <img src="./public/preview/maaashi-mobile-2.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 900px; object-fit: cover;"/>
 </div>
 
 - ⚡ **Smooth User Experience**  
