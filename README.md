@@ -11,28 +11,29 @@
 - 🔐 **Authentication System**  
    Users can register, log in, and manage their accounts securely.
 
-- **Screenshots**
-<div align="center" style="display: flex; justify-content: center;">
+- **📸 Preview**
 
-  <img 
+<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+
+<img 
     src="./public/preview/register.webp" 
     alt="Register Page" 
-    style="width: 350px; height: 220px;"
+    style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"
   />
 
-  <img 
+<img 
     src="./public/preview/login.webp" 
     alt="Login Page" 
-    style="width: 350px; height: 220px;"
+    style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"
   />
 
-  <img 
+<img 
     src="./public/preview/forgotPassword.webp" 
     alt="Forgot Password Page" 
-    style="width: 350px; height: 220px;"
+    style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"
   />
-</div>
 
+</div>
 
 - 📝 **Post Advertisements**  
   After creating an account, users can add their own ads with product details and images.
