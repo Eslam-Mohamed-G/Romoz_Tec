@@ -1,12 +1,92 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 🛍️ Maaashi | Classified Ads Platform
 
-Currently, two official plugins are available:
+**Maaashi** is a web application inspired by the Saudi platform _Haraj_, where users can post and browse advertisements for products or services in an easy and organized way.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🔐 **Authentication System**  
+   Users can register, log in, and manage their accounts securely.
+
+  ## Screenshots
+
+  <p align="center">
+    <img src="./public/preview/register.webp" width="45%" />
+    <img src="./public/preview/login.webp"  width="45%" />
+  </p>
+  <p align="center">
+    <img src="./public/preview/forgotPassword.webp"  width="45%" />
+  </p>
+
+- 📝 **Post Advertisements**  
+  After creating an account, users can add their own ads with product details and images.
+
+- 🗂️ **Category-Based Browsing**  
+  Users can browse and filter ads based on specific categories (e.g., Cars, Electronics, Real Estate, etc.).
+
+- 👀 **View Ad Details**  
+  Each ad includes full information such as title, price, location, and seller info.
+
+- 📱 **Responsive UI**  
+  The website is fully responsive and works seamlessly across all devices.
+
+- ⚡ **Smooth User Experience**  
+  Built with reusable components and clean UI interactions.
+
+---
+
+## 🧠 Tech Stack
+
+| Area             | Technology          |
+| ---------------- | ------------------- |
+| Front-End        | React.js + Vite     |
+| Styling          | CSS                 |
+| State Management | Context API         |
+| Routing          | React Router        |
+| Notifications    | Custom Toast System |
+| Hosting          | Vercel              |
+
+---
+
+## 📂 Project Structure
+
+Maaashi/
+├── src/
+│ ├── Components/
+│ ├── Pages/
+│ ├── Context/
+│ ├── Assets/
+│ └── App.jsx
+├── public/
+└── package.json
+
+---
+
+## 💡 How It Works
+
+1. User registers or logs in.
+2. After authentication, they can add new ads through a multi-step **Wizard Form**.
+3. Each ad is categorized (e.g., Cars, Phones, Furniture).
+4. Users can filter and browse ads by category.
+5. Users can view detailed information about any ad, including seller info and location.
+
+---
+
+## 🧰 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/maaashi.git
+
+# Navigate to project folder
+cd maaashi
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
