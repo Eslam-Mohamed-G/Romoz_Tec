@@ -14,11 +14,11 @@
   ## Screenshots
 
   <p align="center">
-    <img src="./public/preview/register.webp" width="45%" />
-    <img src="./public/preview/login.webp"  width="45%" />
+    <img src="./public/preview/register.webp" width="45%" height = "400px"/>
+    <img src="./public/preview/login.webp"  width="45%"  height = "400px"/>
   </p>
   <p align="center">
-    <img src="./public/preview/forgotPassword.webp"  width="45%" />
+    <img src="./public/preview/forgotPassword.webp"  width="45%"  height = "400px"/>
   </p>
 
 - 📝 **Post Advertisements**  
