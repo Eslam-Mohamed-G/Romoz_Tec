@@ -60,8 +60,8 @@
   The website is fully responsive and works seamlessly across all devices.
   - **📸 Preview**
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
-  <img src="./public/preview/maaashi-mobile-1.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 900px; object-fit: cover;"/>
-  <img src="./public/preview/maaashi-mobile-2.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 900px; object-fit: cover;"/>
+  <img src="./public/preview/maaashi-mobile-1.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 600px; object-fit: cover;"/>
+  <img src="./public/preview/maaashi-mobile-2.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 600px; object-fit: cover;"/>
 </div>
 
 - ⚡ **Smooth User Experience**  
