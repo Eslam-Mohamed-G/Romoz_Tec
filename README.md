@@ -12,7 +12,7 @@
    Users can register, log in, and manage their accounts securely.
 
 - **Screenshots**
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center;">
+<div align="center" style="display: flex; justify-content: center;">
 
   <img 
     src="./public/preview/register.webp" 
