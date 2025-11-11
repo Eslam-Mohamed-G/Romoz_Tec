@@ -13,7 +13,7 @@
 
 - **Screenshots**
 
-<div align="center" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px;">
+<div align="center" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center;">
 
   <img src="./public/preview/register.webp" 
        alt="Register Page" 
