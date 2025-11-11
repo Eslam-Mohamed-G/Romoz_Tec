@@ -13,7 +13,7 @@
 
 - **Screenshots**
 
-<div align="center" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px;">
+<p align="center" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px;">
 
   <img src="./public/preview/register.webp" 
        alt="Register Page" 
@@ -28,7 +28,7 @@
        alt="Forgot Password Page" 
        style="width: 350px; height: 220px;"/>
 
-</div>
+</p>
 
 - 📝 **Post Advertisements**  
   After creating an account, users can add their own ads with product details and images.
