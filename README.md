@@ -18,19 +18,19 @@
 <img 
     src="./public/preview/register.webp" 
     alt="Register Page" 
-    style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"
+    
   />
 
 <img 
     src="./public/preview/login.webp" 
     alt="Login Page" 
-    style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"
+    
   />
 
 <img 
     src="./public/preview/forgotPassword.webp" 
     alt="Forgot Password Page" 
-    style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"
+    
   />
 
 </div>
