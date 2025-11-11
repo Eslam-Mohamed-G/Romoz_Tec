@@ -17,15 +17,15 @@
 
   <img src="./public/preview/register.webp" 
        alt="Register Page" 
-       style=" min-width: 200px; max-width: 300px; height: 240px;"/>
+       style="width: 200px; height: 180px;"/>
 
   <img src="./public/preview/login.webp" 
        alt="Login Page" 
-       style=" min-width: 200px; max-width: 300px; height: 240px;"/>
+       style="width:200px; height: 180px;"/>
 
   <img src="./public/preview/forgotPassword.webp" 
        alt="Forgot Password Page" 
-       style=" min-width: 200px; max-width: 300px; height: 240px;"/>
+       style="width: 200px; height: 180px;"/>
 
 </div>
 
