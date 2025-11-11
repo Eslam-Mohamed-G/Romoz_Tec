@@ -3,7 +3,6 @@
 # 🛍️ Maaashi | Classified Ads Platform
 
 **Maaashi** is a web application inspired by the Saudi platform _Haraj_, where users can post and browse advertisements for products or services in an easy and organized way.
-- **📸 Preview**
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
   <img src="./public/preview/maaashi.webp" style="width: 100%;"/>
 </div>
@@ -13,7 +12,7 @@
 
 - 🔐 **Authentication System**  
    Users can register, log in, and manage their accounts securely.
-- **📸 Preview**
+  - **📸 Preview**
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
   <img src="./public/preview/register.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
   <img src="./public/preview/login.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
@@ -22,7 +21,7 @@
 
 - 👤 **User Profile**  
   Each user has a personal profile page where they can view and manage their posted ads and personal information.
-- **📸 Preview**
+  - **📸 Preview**
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
   <img src="./public/preview/UserProfile.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
   <img src="./public/preview/UserProfile-faveorit.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
@@ -33,7 +32,7 @@
 
 - 📝 **Post Advertisements**  
   After creating an account, users can add their own ads with product details and images.
-- **📸 Preview**
+  - **📸 Preview**
 <div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
   <img src="./public/preview/Advertisements-category.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
   <img src="./public/preview/Advertisements-informaiton.webp" style="width: 45%; min-width: 280px; max-width: 400px; height: 220px; object-fit: cover;"/>
@@ -44,14 +43,14 @@
 
 - 🗂️ **Category-Based Browsing**  
   Users can browse and filter ads based on specific categories (e.g., Cars, Electronics, Real Estate, etc.).
-- **📸 Preview**
+  - **📸 Preview**
 <div align="center">
   <img src="./public/preview/SpecificCategory.webp" style="width: 100%;"/>
 </div>
 
 - 👀 **View Ad Details**  
   Each ad includes full information such as title, price, location, and seller info.
-- **📸 Preview**
+  - **📸 Preview**
 <div align="center">
   <img src="./public/preview/detailes-ad.webp" style="width: 100%;"/>
 </div>
