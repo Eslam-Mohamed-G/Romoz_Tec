@@ -17,21 +17,20 @@
   <img 
     src="./public/preview/register.webp" 
     alt="Register Page" 
-    style="width: 45%; height: 220px;"
+    style="width: 350px; height: 220px;"
   />
 
   <img 
     src="./public/preview/login.webp" 
     alt="Login Page" 
-    style="width: 45%; height: 220px;"
+    style="width: 350px; height: 220px;"
   />
 
   <img 
     src="./public/preview/forgotPassword.webp" 
     alt="Forgot Password Page" 
-    style="width: 45%; height: 220px;"
+    style="width: 350px; height: 220px;"
   />
-
 </div>
 
 
