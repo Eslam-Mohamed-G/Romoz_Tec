@@ -18,19 +18,16 @@
 <img 
     src="./public/preview/register.webp" 
     alt="Register Page" 
-    
   />
 
 <img 
     src="./public/preview/login.webp" 
     alt="Login Page" 
-    
   />
 
 <img 
     src="./public/preview/forgotPassword.webp" 
     alt="Forgot Password Page" 
-    
   />
 
 </div>
