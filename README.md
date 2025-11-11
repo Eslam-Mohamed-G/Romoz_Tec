@@ -13,19 +13,19 @@
 
 ## Screenshots
 
-<div align="center" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+<div align="center" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px;">
 
   <img src="./public/preview/register.webp" 
        alt="Register Page" 
-       style="width: 45%; min-width: 280px; max-width: 400px; height: auto; object-fit: cover; border-radius: 10px;"/>
+       style=" min-width: 280px; max-width: 400px; height: 280px;"/>
 
   <img src="./public/preview/login.webp" 
        alt="Login Page" 
-       style="width: 45%; min-width: 280px; max-width: 400px; height: auto; object-fit: cover; border-radius: 10px;"/>
+       style=" min-width: 280px; max-width: 400px; height: 280px;"/>
 
   <img src="./public/preview/forgotPassword.webp" 
        alt="Forgot Password Page" 
-       style="width: 45%; min-width: 280px; max-width: 400px; height: auto; object-fit: cover; border-radius: 10px;"/>
+       style=" min-width: 280px; max-width: 400px; height: 280px;"/>
 
 </div>
 
