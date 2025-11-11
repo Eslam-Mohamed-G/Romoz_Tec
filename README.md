@@ -11,12 +11,12 @@
 - 🔐 **Authentication System**  
    Users can register, log in, and manage their accounts securely.
 
-  ## Screenshots
+## Screenshots
 
-  <p align="center">
-    <img src="./public/preview/register.webp" width="45%" style="height: 400px; object-fit: cover;"/>
-    <img src="./public/preview/login.webp" width="45%" style="height: 400px; object-fit: cover;"/>
-  </p>
+<p align="center">
+  <img src="./public/preview/register.webp" width="100%" style="max-width: 400px; height: auto; border-radius: 10px;"/>
+  <img src="./public/preview/login.webp" width="100%" style="max-width: 400px; height: auto; border-radius: 10px;"/>
+</p>
   <p align="center">
     <img src="./public/preview/forgotPassword.webp" width="45%" style="height: 400px; object-fit: cover;"/>
   </p>
