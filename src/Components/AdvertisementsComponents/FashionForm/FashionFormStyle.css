@@ -1,13 +1,5 @@
-.fashionType_container {
-    text-align: start;
-    margin-top: 15px;
-    position: relative;
-}
-.fashion_inputs .fashionType_container label {
-    font-size: var(--font-size-sm);
-    font-weight: 500;
-}
-.fashionType_container .input_container{
-    margin: 0px;
-    margin-top: 10px;
+.fashion_inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
