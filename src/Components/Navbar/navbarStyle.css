@@ -259,6 +259,8 @@
   color: var(--color);
 }
 
+/*--------------- toast-warning --------------- */
+/*--------------- toast-warning --------------- */
 .toast_warning {
   width: 100%;
   max-width: 350px;
@@ -419,7 +421,7 @@
     overflow: hidden;
   }
 
-  .nav.open {
+  .nav.openNav {
     width: 180px;
     padding: 20px;
   }

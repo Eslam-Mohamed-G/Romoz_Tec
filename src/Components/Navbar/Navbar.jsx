@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import "./header.css";
 import { Link, NavLink } from "react-router-dom";
 import { contextData } from "../../Context/Context";
 import Logout from "../../Pages/Auth/Logout/Logout";
+import "./navbarStyle.css";
 
 export default function Navbar() {
   const { userID, token, fetchUserData, userData, showFavoriteToast, setShowFavoriteToast } = useContext(contextData);
@@ -88,7 +88,7 @@ export default function Navbar() {
           </NavLink>
         </div>
         {/* list-links */}
-        <ul id="primary-navigation" ref={menuRef} className={`nav ${menuOpen ? "open" : ""}`} >
+        <ul id="primary-navigation" ref={menuRef} className={`nav ${menuOpen ? "openNav" : ""}`} >
           <li><NavLink to="/"><span>الرئيسية</span></NavLink></li>
           <li><NavLink to="/contactUs"><span>اتصل بنا</span></NavLink></li>
           <li><NavLink to="/aboutUs"><span>من نحن</span></NavLink></li>
